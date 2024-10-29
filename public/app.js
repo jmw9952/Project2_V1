@@ -17,9 +17,10 @@ let backgroundImg;
 let imgPos = [];
 
 function preload(){
-    defaultImage = loadImage("media/birthofbernie.jpg");
+    defaultImage = loadImage("media/male-nipple.png");
     // console.log(defaultImage);
-    backgroundImg = loadImage("media/Venus-of-Urbino-Titian.jpg");
+    backgroundImg1 = loadImage("media/Venus-of-Urbino-Titian.jpg");
+
 }
 
 function setup() {
@@ -36,7 +37,7 @@ function setup() {
 
 function draw (){
     imageMode(CENTER);
-    image(backgroundImg, width/2, height/2);
+    image(backgroundImg1, width/2, height/2);
     for (i=0; i<imgPos.length; i++){
         drawNipple(imgPos[i]);
     }
@@ -53,5 +54,5 @@ function mouseClicked() {
 // draw nipple
 function drawNipple(pos) {
     imageMode(CENTER);
-    image(defaultImage, pos.x, pos.y, 240, 150);
+    image(defaultImage, pos.x, pos.y, 30, 30);
 }
